@@ -50,8 +50,9 @@ public class BirdScript : MonoBehaviour
             bird.SetActive(true);
         }
         
-        else if(bird==null || enemyScript.enemiesCount<=0)
+        else if(bird==null)
         {
+            enemyScript.enemiesCount = 0;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
